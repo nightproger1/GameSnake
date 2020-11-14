@@ -72,7 +72,11 @@ function drawGame() {
 
 	if(snakeX < box || snakeX > box * 17
 		|| snakeY < 3 * box || snakeY > box * 17)
-		clearInterval(game);
+    {
+      clearInterval(game);
+    location.reload();
+  }
+
 
 	if(dir == "left") snakeX -= box;
 	if(dir == "right") snakeX += box;

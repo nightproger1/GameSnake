@@ -40,7 +40,10 @@ function direction(event) {
 function eatTail(head, arr) {
 	for(let i = 0; i < arr.length; i++) {
 		if(head.x == arr[i].x && head.y == arr[i].y)
+		{
 			clearInterval(game);
+			location.reload();
+		}
 	}
 }
 
@@ -74,7 +77,7 @@ function drawGame() {
 		|| snakeY < 3 * box || snakeY > box * 17)
     {
       clearInterval(game);
-    location.reload();
+      location.reload();
   }
 
 
